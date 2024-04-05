@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+h1, h2 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+
+label {
+  font-weight: bold;
+}
+
+input[type="checkbox"] {
+  margin: 10px;
+  width: 50px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #f1e21d ;
+  color: #444;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.area-header {
+  display: flex;
+  justify-content: space-around;
+}
+
+.area-header img {
+  width: 100px;
+}
+
+.area-header ul {
+  list-style: none;
+}
+
+.area-dados {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.area-dados span {
+  font-weight: bold;
+}
+
+.servicos-list {
+  list-style: none;
+}
+
+.dados-cliente {
+  padding: 5px;
+  border-bottom: 2px solid #444;
+}
+
+.detalhes-os p{
+  margin-bottom: 10px;
+}
+
+.area-itens-info {
+  margin-bottom: 20px;
+}
+
+.area-itens-info p {
+  margin: 10px 0;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #444;
+
+}
+
+
+.area-info-adc div {
+  max-width: 1204px;
+  padding: 10px;
+  border: 2px solid #444;
+  margin: auto;
+}
+
+.area-info-adc p {
+  padding-bottom: 5px;
+  border-bottom: 2px solid #444;
+}
+
+.print {
+  display: none;
+  
+  
+}
+.area-header {
+  border-bottom: 2px solid #444;
+  padding: 20px;
+}
+
+.area-assinatura {
+  max-width: 1024px;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  padding: 20px;
+  margin: 40px auto;
+}
+.area-ass-tec, .area-ass-clt {
+  border-top: 2px solid #444;
+  padding: 3px 20px;
+}
+
+.area-header-dados {
+  display: flex;
+  justify-content: space-around;
+}
+
+.area-dados--form {
+  display: flex;
+  justify-content: space-between;
+  align-items: self-start;
+}
+
+
+@media print {
+
+  
+
+  .print {
+    display: block;
+  }
+
+  .dados {
+    display: none;
+  }
+}

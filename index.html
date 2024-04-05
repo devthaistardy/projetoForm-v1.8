@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ordem de Serviço</title>
+  <link rel="stylesheet" href="src/css/styles.css">
+</head>
+
+<body>
+  <div class="area-header">
+    <div class="area-logo">
+      <img src="logo.png" alt="">
+    </div>
+    <div class="area-dados">
+      <span> EG SOLUÇÕES SEGURANÇA LTDA</span>
+      <ul>
+        <li>CNPJ: 45.909.403/0001-96</li>
+        <li>Rua São Clemente, 271, Botafogo - Rio de Janeiro</li>
+        <li>(21) 99999-9999</li>
+        <li>egsolucoes.seg@gmail.com</li>
+      </ul>
+    </div>
+  </div>
+  <h1>Ordem de Serviço</h1>
+  <form id="ordem-servico-form" class="dados">
+    <label for="cliente">Cliente:</label>
+    <input type="text" id="cliente" name="cliente" required><br><br>
+
+    <label for="endereco">Endereço:</label>
+    <input type="text" id="endereco" name="endereco" required><br><br>
+
+    <label for="telefone">Telefone:</label>
+    <input type="tel" id="telefone" name="telefone"><br><br>
+
+    <div class="area-form--checkbox">
+      <label>Serviços:</label><br>
+      <div>
+        <input type="checkbox" name="servicos" value="Câmeras" id="serv-cam">
+        <label for="serv-cam">Câmeras</label>
+      </div>
+      <div>
+        <input type="checkbox" name="servicos" value="DVR & HD" id="serv-dvr">
+        <label for="serv-dvr">DVR & HD</label>
+      </div>
+      <div>
+        <input type="checkbox" name="servicos" value="Portões, Dobradiças e Fechaduras" id="serv-port">
+        <label for="serv-port">Portões, Dobradiças e Fechaduras</label>
+      </div>
+      <div>
+        <input type="checkbox" name="servicos" value="Botoeiras" id="serv-bot">
+        <label for="serv-bot">Botoeiras</label>
+      </div>
+      <div>
+        <input type="checkbox" name="servicos" value="Interfones" id="serv-int">
+        <label for="serv-int">Interfones</label>
+      </div>
+      <div>
+        <input type="checkbox" name="servicos" value="Linhas Telefônicas" id="tel">
+        <label for="tel">Linhas Telefônicas</label><br>
+      </div>
+    </div>
+
+    <label for="descricao">Informações complementares:</label><br>
+    <textarea id="descricao" name="descricao" rows="4" cols="50"></textarea><br><br>
+
+    <button type="submit">Gerar PDF</button>
+  </form>
+
+  <!-- Seção para exibir os detalhes da ordem de serviço -->
+  <div id="detalhes-ordem-servico" class="print">
+    <div class="detalhes-os print">
+
+      <h2>Detalhes da Manutenção Preventiva</h2>
+      <p class="dados-cliente"><strong>Dados do cliente</strong></p><br>
+      <div class="area-dados--form">
+        <div class="area-dados--form-cliente">
+          <p><strong>Cliente:</strong> <span id="cliente-info"></span></p>
+          <p><strong>Endereço:</strong> <span id="endereco-info"></span></p>
+          <p><strong>Telefone:</strong> <span id="telefone-info"></span></p>
+        </div>
+        <div class="area-dados--form--data">
+          <p><strong>Data do atendimento:</strong><br>
+            <span id="data-hora"></span>
+          </p>
+
+        </div>
+
+        <br>
+      </div>
+
+      <div class="area-itens-info">
+
+        <p><strong>Itens Verificados:</strong></p>
+        <ul id="servicos-list" class="servicos-list"></ul> <!-- Lista ordenada para os serviços -->
+      </div>
+      <div class="area-info-adc">
+        <p><strong>Informações adicionais:</strong></p><br>
+        <div id="descricao-info"></div>
+      </div>
+    </div>
+    <div class="area-assinatura">
+      <div class="area-ass-tec">Assinatura do Técnico</div>
+      <div class="area-ass-clt">Assinatura do Cliente</div>
+
+    </div>
+  </div>
+
+
+
+  <script src="src/js/script.js"></script>
+</body>
+
+</html>
