@@ -129,6 +129,10 @@ button {
   padding: 3px 20px;
 }
 
+.area-form--checkbox {
+  padding: 20px;
+}
+
 .area-header-dados {
   display: flex;
   justify-content: space-around;
@@ -139,6 +143,69 @@ button {
   justify-content: space-between;
   align-items: self-start;
 }
+
+.area-radio-mod {
+  padding: 20px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.input-radio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-radio label {
+  width: 250px;
+}
+
+/* Area do Modal de Boas vindas */
+
+/* Estilos do Modal */
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed; /* Fica fixo na tela */
+    z-index: 1; /* Fica acima de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    overflow: auto; /* Ativa o scroll se necessário */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% de margem acima e centraliza */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Largura do modal */
+}
+
+.modal button {
+  margin: 15px 0;
+}
+
+.close {
+    color: #aaa;
+    float: right; /* Alinha à direita */
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* Muda a cor ao passar o mouse */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Fim de teste do Modal */
 
 
 @media print {
