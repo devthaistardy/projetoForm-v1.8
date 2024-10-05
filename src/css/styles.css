@@ -145,6 +145,7 @@ button {
 }
 
 .area-radio-mod {
+  background: red;
   max-width: 100%;
   margin: 20px 0;
   padding: 10px 0;
@@ -156,7 +157,8 @@ button {
 }
 
 .input-radio {
-  max-width: 250px;
+  background: green;
+  max-width: 350px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -164,7 +166,7 @@ button {
 }
 
 .input-radio label {
-  width: 250px;
+  max-width: 350px;
 }
 
 @media print {
