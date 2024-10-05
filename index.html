@@ -10,6 +10,21 @@
 </head>
 
 <body>
+
+  <!--Area do Modal de boas vindas -->
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Olá Técnico, seja Bem-vindo a nossa página de Ordem de Serviços! </h2>
+        <p>Vamos começar?</p>
+        <button id="okButton">OK</button>
+    </div>
+</div>
+
+
+  <!--Fim da area do Modal -->
+
   <div class="area-header">
     <div class="area-logo">
       <img src="logo.png" alt="">
@@ -19,13 +34,27 @@
       <ul>
         <li>CNPJ: 45.909.403/0001-96</li>
         <li>Rua São Clemente, 271, Botafogo - Rio de Janeiro</li>
-        <li>(21) 99999-9999</li>
+        <li>(21) 98280-5535</li>
         <li>egsolucoes.seg@gmail.com</li>
       </ul>
     </div>
   </div>
   <h1>Ordem de Serviço</h1>
   <form id="ordem-servico-form" class="dados">
+    
+    <div class="area-radio-mod">
+      <div class="input-radio">
+        <input type="radio" name="modo" value="Ordem de Serviço" id="mod-os">
+        <label for="mod-os">Ordem de Serviço</label>
+      </div>
+      
+      <div class="input-radio">
+        <input type="radio" name="modo" value="Manutenção Preventiva" id="mod-mp">
+        <label for="mod-mp">Manutenção Preventiva</label>
+      </div>
+    </div>
+
+
     <label for="cliente">Cliente:</label>
     <input type="text" id="cliente" name="cliente" required><br><br>
 
@@ -61,7 +90,17 @@
         <input type="checkbox" name="servicos" value="Linhas Telefônicas" id="tel">
         <label for="tel">Linhas Telefônicas</label><br>
       </div>
+      <div>
+        <input type="checkbox" name="servicos" value="Alarmes" id="alarme">
+        <label for="alarme">Alarmes</label><br>
+      </div>
+      <div>
+        <input type="checkbox" name="servicos" value="Fotocelula" id="fotocelula">
+        <label for="fotocelula">Fotocelula</label><br>
+      </div>
     </div>
+    
+  </div>
 
     <label for="descricao">Informações complementares:</label><br>
     <textarea id="descricao" name="descricao" rows="4" cols="50"></textarea><br><br>
