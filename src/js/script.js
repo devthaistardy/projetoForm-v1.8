@@ -7,6 +7,10 @@ document.getElementById('ordem-servico-form').addEventListener('submit', functio
   var telefone = document.getElementById('telefone').value;
   var descricao = document.getElementById('descricao').value;
 
+  // Get selected radio option
+  var modoSelecionado = document.querySelector('input[name="modo"]:checked');
+  var modoTexto = modoSelecionado ? modoSelecionado.value : 'Nenhum modo selecionado';
+
   // Get selected services
   var servicosSelecionados = [];
   var servicosCheckboxes = document.getElementsByName('servicos');
@@ -22,7 +26,8 @@ document.getElementById('ordem-servico-form').addEventListener('submit', functio
     endereco: endereco,
     telefone: telefone,
     servicos: servicosSelecionados,
-    descricao: descricao
+    descricao: descricao,
+    modo: modoTexto // Adiciona o modo selecionado ao objeto
   };
 
   // Display order details
@@ -40,6 +45,9 @@ document.getElementById('ordem-servico-form').addEventListener('submit', functio
     servicosList.appendChild(listItem);
   }
 
+  // Display selected mode as title
+  document.title = `Ordem de Serviço - ${ordemServico.modo} - ${ordemServico.cliente}`;
+
   // Seleciona o elemento onde a data e hora serão exibidas
   var dataHoraElemento = document.getElementById("data-hora");
   
@@ -56,11 +64,49 @@ document.getElementById('ordem-servico-form').addEventListener('submit', functio
   // Define o texto do elemento para a data e hora formatadas
   dataHoraElemento.textContent = dataHoraFormatada;
 
-  document.title = `Manutenção preventiva - ${ordemServico.cliente} - ${dataHoraFormatada}`;
+  // Atualiza o título com o modo selecionado
+  document.title = `Ordem de Serviço - ${ordemServico.modo} - ${ordemServico.cliente} - ${dataHoraFormatada}`;
 
-  window.print()
+  // Atualiza o h2 com o modo selecionado
+  document.querySelector('.detalhes-os h2').innerText = `Detalhes da ${ordemServico.modo}`;
+
+  // Adiciona imagens TESTE
+  
+
+  // Imprimir a página
+  window.print();
 });
 
 
+//area do Modal de boas vindas
+
+// Obtém o modal
+const modal = document.getElementById("myModal");
+
+// Obtém o botão de fechar
+const span = document.getElementsByClassName("close")[0];
+
+// Mostra o modal quando a página é carregada
+window.onload = function() {
+    modal.style.display = "block";
+};
+
+// Fecha o modal quando o usuário clica no "X"
+span.onclick = function() {
+    modal.style.display = "none";
+};
+
+// Fecha o modal quando o usuário clica no botão "OK"
+document.getElementById("okButton").onclick = function() {
+    modal.style.display = "none";
+};
+
+// Fecha o modal se o usuário clicar fora dele
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+};
 
 
+//fim da area do Modal
