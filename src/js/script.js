@@ -65,7 +65,7 @@ document.getElementById('ordem-servico-form').addEventListener('submit', functio
   dataHoraElemento.textContent = dataHoraFormatada;
 
   // Atualiza o título com o modo selecionado
-  document.title = `Ordem de Serviço - ${ordemServico.modo} - ${ordemServico.cliente} - ${dataHoraFormatada}`;
+  document.title = `${ordemServico.modo} - ${ordemServico.cliente} - ${dataHoraFormatada}`;
 
   // Atualiza o h2 com o modo selecionado
   document.querySelector('.detalhes-os h2').innerText = `Detalhes da ${ordemServico.modo}`;
